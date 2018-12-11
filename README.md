@@ -3,7 +3,7 @@ Hongyu Yang, Di Huang, Yunhong Wang, and Anil K. Jain
 ### Abstract
 The two underlying requirements of face age progression, i.e. aging accuracy and identity permanence, are not well studied in the literature. In this paper, we present a novel generative adversarial network based approach. It separately models the constraints for the intrinsic subject-specific characteristics and the age-specific facial changes with respect to the elapsed time, ensuring that the generated faces present desired aging effects while simultaneously keeping personalized properties stable. Further, to generate more lifelike facial details, high-level age-specific features conveyed by the synthesized face are estimated by a pyramidal adversarial discriminator at multiple scales, which simulates the aging effects in a finer manner. The proposed method is applicable to diverse face samples in the presence of variations in pose, expression, makeup, etc., and remarkably vivid aging effects are achieved. Both visual fidelity and quantitative evaluations show that the approach advances the state-of-the-art. For more details, please refer to our [CVPR paper](http://openaccess.thecvf.com/content_cvpr_2018/papers/Yang_Learning_Face_Age_CVPR_2018_paper.pdf). 
 
-<img align="right" src="https://github.com/yoyohonyang/LearningFaceAgeProgression/blob/master/doc/LearningFaceAgeProgression.png">
+<img align="right" src="https://github.com/yoyohonyang/LearingFaceAgeProgression/blob/master/doc/LearningFaceAgeProgression.png">
 
 ## Setup
 The code is implemented in [Torch7](http://torch.ch/).
