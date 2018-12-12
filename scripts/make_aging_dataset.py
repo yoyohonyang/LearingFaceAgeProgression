@@ -108,9 +108,8 @@ def add_data(h5_file, image_dir, image_list_file, prefix, args):
 if __name__ == '__main__':
   
   with h5py.File(args.output_file, 'w') as f:
-"""
-add_data(f, args.train_x_dir, args.train_image_list_x, 'train_x', args)
-"""
+#    add_data(f, args.train_x_dir, args.train_image_list_x, 'train_x', args)
+
 
     if args.include_val != 0:
 	add_data(f, args.val_x_dir, args.val_image_list_x, 'val_x', args)
