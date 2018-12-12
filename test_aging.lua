@@ -57,27 +57,11 @@ end
 loader:reset('val')
 
 ---Warm up the GPU
-local optimStateG = {learningRate = 1e-10}
-local parametersG, gradParametersG = netG:getParameters()
-local fGx = function(x)   
-    gradParametersG:zero()
-	errG = 0
-
-   local x1 = torch.randn(opt.batch_size, 3, 224, 224):type(dtype)
-   local y1 = netG:forward(x1)
-
-   local dy = torch.randn(#y1):type(dtype)
-   netG:updateGradInput(x1, dy) 
-   --netG:backward(x1,dy) 
-   return errG,  gradParametersG
-end
-
-
----Warm up the GPU
 if opt.use_cudnn then
-	print('Warm up the GPU...')
+print('Warm up the GPU...')
 	for t1 = 1, 10 do
-		optim.adam(fGx, parametersG, optimStateG)
+	local x1 = torch.randn(opt.batch_size, 3, 224, 224):type(dtype)
+	local y1 = netG:forward(x1)
 	end
 end
 
