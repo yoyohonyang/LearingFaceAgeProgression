@@ -45,7 +45,7 @@ luarocks install cudnn
 
 ## Pretrained Models
 Download the pretrained models to the folder `models/`.
-* [CACD]()
+* [CACD](https://drive.google.com/file/d/1q0O9CTCNfAjLOKXywggLz6fU3zrmfNJ9/view?usp=sharing)
 
 
 
