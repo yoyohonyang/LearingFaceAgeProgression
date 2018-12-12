@@ -23,8 +23,8 @@ local opt = {
     preprocessing = 'vgg',  
     gpu = 1,      
     backend =  'cuda', 'cuda|opencl', 
-    output_dir = './test_CACD_20181212',
-    output_filename = 'test_CACD_20181212',
+    output_dir = './CACD_aging_results',
+    output_filename = 'CACD_aging_results',
     num_val_batches = 20,
 	batch_size = 8,
 }
