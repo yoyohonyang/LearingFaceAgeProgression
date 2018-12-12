@@ -12,11 +12,11 @@ Create an HDF5 file of images for training a feedforward face aging model.
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--train_x_dir', default='data/CACD/CACD2000_rotate_rename_new')
-parser.add_argument('--train_image_list_x', default='data/CACD/cacd_cross_validating_list_new/image_list_labelFrom0_disorder_5fold5_agegroup0_train_new.txt')
-parser.add_argument('--val_x_dir', default='data/CACD/CACD2000_rotate_rename_new')
-parser.add_argument('--val_image_list_x', default='data/CACD/cacd_cross_validating_list_new/image_list_labelFrom0_disorder_5fold5_agegroup0_test_new.txt')
-parser.add_argument('--output_file', default='data/CACD/CACD_disorder_5fold5_agegroup0_new.h5')
+parser.add_argument('--train_x_dir', default='data/CACD/input')
+parser.add_argument('--train_image_list_x', default='data/CACD/image_list_cacd.txt')
+parser.add_argument('--val_x_dir', default='data/CACD/input')
+parser.add_argument('--val_image_list_x', default='data/CACD/image_list_cacd.txt')
+parser.add_argument('--output_file', default='data/CACD/CACD_test.h5')
 
 parser.add_argument('--height', type=int, default=224)
 parser.add_argument('--width', type=int, default=224)
@@ -108,7 +108,7 @@ def add_data(h5_file, image_dir, image_list_file, prefix, args):
 if __name__ == '__main__':
   
   with h5py.File(args.output_file, 'w') as f:
-    add_data(f, args.train_x_dir, args.train_image_list_x, 'train_x', args)
+#    add_data(f, args.train_x_dir, args.train_image_list_x, 'train_x', args)
 
 
     if args.include_val != 0:
