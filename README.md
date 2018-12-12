@@ -5,6 +5,9 @@ The two underlying requirements of face age progression, i.e. aging accuracy and
 
 <img align="right" src="https://github.com/yoyohonyang/LearingFaceAgeProgression/blob/master/doc/LearningFaceAgeProgression.png">
 
+
+In this repository we provide the pretrained aging models and the demo code. 
+
 ## Setup
 The code is implemented in [Torch7](http://torch.ch/).
 
@@ -41,10 +44,20 @@ luarocks install cudnn
 
 
 ## Pretrained Models
-
+Download the models to the folder `models/`.
 * [CACD](https://drive.google.com/file/d/1Cy1hiX9ONBUI9WF9LF0V2BV8Vr8kshZ9/view?usp=sharing)
 * [MORPH](https://drive.google.com/file/d/1Cy1hiX9ONBUI9WF9LF0V2BV8Vr8kshZ9/view?usp=sharing)
 
+## Running on new images
+The script `test_aging.lua` lets you use a trained model to aging new face images:
+
+```bash
+th test_aging.lua \
+  -model models/CACD_AgeGroup3.t7 \
+  -input_dir data/CACD/input/ \
+  -output_dir data/CACD/output/
+```
+By default this script runs on CPU; to run on GPU, add the flag -gpu specifying the GPU on which to run.
 
 If you find this code useful for your research, please cite
 
