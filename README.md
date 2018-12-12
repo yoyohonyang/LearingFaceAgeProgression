@@ -5,7 +5,8 @@ The two underlying requirements of face age progression, i.e. aging accuracy and
 
 <img align="right" src="https://github.com/yoyohonyang/LearingFaceAgeProgression/blob/master/doc/LearningFaceAgeProgression.png">
 
-In this repository we provide the pretrained aging models and the demo code for the paper. 
+
+In this repository we provide the pretrained aging models and the demo code. 
 
 ## Setup
 The code is implemented in [Torch7](http://torch.ch/).
