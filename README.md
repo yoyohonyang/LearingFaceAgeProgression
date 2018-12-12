@@ -49,15 +49,13 @@ Download the pretrained models to the folder `models/`.
 
 
 
-
-
 ## Running on new images
-The script `make_aging_dataset.py` lets you generate the h5 file:
+The script `make_aging_dataset.py` lets you put the face images into the hdf5 file:
 ```bash
 python scripts/make_aging_dataset.py
 ```
 
-The script `test_aging.lua` lets you use a trained model to aging new face images:
+The script `test_aging.lua` lets you use a trained model to aging the face images:
 ```bash
 th test_aging.lua
 ```
