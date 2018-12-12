@@ -83,7 +83,3 @@ for t2 = 1, opt.num_val_batches do
     end
 	image.save(paths.concat(opt.output_dir,  opt.output_filename ..'_'.. t2 .. '_test_res.png'), image_out)
 end
-
-
-
-
