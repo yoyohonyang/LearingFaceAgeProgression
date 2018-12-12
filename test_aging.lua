@@ -16,11 +16,10 @@ local preprocess = require 'FaceAging.preprocess'
 
 
 
-
 local opt = {
     models = "./models/CACD_Aging.t7" ,
-	use_instance_norm = 1,
     h5_file = 'data/CACD/CACD_test.h5',
+	use_instance_norm = 1,
     preprocessing = 'vgg',  
     gpu = 1,      
     backend =  'cuda', 'cuda|opencl', 
@@ -43,12 +42,12 @@ local loader = DataLoader_aging_test(opt)
 
 
 local dtype, use_cudnn = utils.setup_gpu(opt.gpu, opt.backend, opt.use_cudnn == 1)
-cutorch.setDevice(2)
+cutorch.setDevice(1)
 
 -- set up generator
 local netG = nil
 if opt.models ~= '' then
-    print('Loading checkpoint from ' .. opt.models)
+    print('Loading model from ' .. opt.models)
     netG = torch.load(opt.models).netG:type(dtype)
 else
     print('No such file!')  
@@ -56,9 +55,10 @@ end
 
 
 loader:reset('val')
+
+---Warm up the GPU
 local optimStateG = {learningRate = 1e-10}
 local parametersG, gradParametersG = netG:getParameters()
----Warm up the GPUs
 local fGx = function(x)   
     gradParametersG:zero()
 	errG = 0
@@ -67,30 +67,29 @@ local fGx = function(x)
    local y1 = netG:forward(x1)
 
    local dy = torch.randn(#y1):type(dtype)
-   -- netG:updateGradInput(x1, dy) 
-   netG:backward(x1,dy) 
+   netG:updateGradInput(x1, dy) 
+   --netG:backward(x1,dy) 
    return errG,  gradParametersG
 end
 
 
 ---Warm up the GPU
 if opt.use_cudnn then
-print('Warm up the GPU...')
-for t1 = 1, 10 do
-	optim.adam(fGx, parametersG, optimStateG)
-end
+	print('Warm up the GPU...')
+	for t1 = 1, 10 do
+		optim.adam(fGx, parametersG, optimStateG)
+	end
 end
 
+-- Testing
 netG:evaluate()
 print('Testing...')
 for t2 = 1, opt.num_val_batches do
-
     print(t2)
 	image_out_final = nil
 	local x = loader:getBatch('val')	    		
     x = x:type(dtype)
-	local out = netG:forward(x)
-	
+	local out = netG:forward(x)	
 	out = preprocess.deprocess(out)
 	input = preprocess.deprocess(x)
 	image_out = nil

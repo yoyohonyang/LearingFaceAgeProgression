@@ -21,10 +21,8 @@ function DataLoader_aging_test:__init(opt)
   }
   local val_size = self.h5_file:read(self.image_paths.val_x):dataspaceSize()
 
-  self.split_sizes = {
-  
-    val = self.h5_file:read(self.image_paths.val_x):dataspaceSize()[1],
-   
+  self.split_sizes = {  
+    val = self.h5_file:read(self.image_paths.val_x):dataspaceSize()[1],   
   }
   self.num_channels = val_size[2]
   self.image_height = val_size[3]

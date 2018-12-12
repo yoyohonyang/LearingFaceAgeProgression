@@ -1,3 +1,5 @@
+-- Many thanks to Justin Johnson (http://cs.stanford.edu/people/jcjohns/) for sharing the code
+
 local layer, parent = torch.class('nn.ShaveImage', 'nn.Module')
 
 function layer:__init(size)

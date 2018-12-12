@@ -1,3 +1,6 @@
+--[[
+Many thanks to Justin Johnson (http://cs.stanford.edu/people/jcjohns/) for sharing the code
+]]--
 require 'torch'
 
 

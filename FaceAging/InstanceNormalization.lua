@@ -1,6 +1,7 @@
 require 'nn'
 
---[[
+--[[ Many thanks to Justin Johnson (http://cs.stanford.edu/people/jcjohns/) for sharing the code
+
   Implements instance normalization as described in the paper
   
   Instance Normalization: The Missing Ingredient for Fast Stylization
@@ -9,7 +10,9 @@ require 'nn'
 
   This implementation is based on
   https://github.com/DmitryUlyanov/texture_nets
+ 
 ]]
+
 
 local InstanceNormalization, parent = torch.class('nn.InstanceNormalization',
                                                   'nn.Module')
