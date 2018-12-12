@@ -41,10 +41,20 @@ luarocks install cudnn
 
 
 ## Pretrained Models
-
+Download the models to the folder `models/`.
 * [CACD](https://drive.google.com/file/d/1Cy1hiX9ONBUI9WF9LF0V2BV8Vr8kshZ9/view?usp=sharing)
 * [MORPH](https://drive.google.com/file/d/1Cy1hiX9ONBUI9WF9LF0V2BV8Vr8kshZ9/view?usp=sharing)
 
+## Running on new images
+The script `test_aging.lua` lets you use a trained model to aging new face images:
+
+```bash
+th test_aging.lua \
+  -model models/CACD_AgeGroup3.t7 \
+  -input_dir images/CACD/input/ \
+  -output_dir images/CACD/output/
+```
+By default this script runs on CPU; to run on GPU, add the flag -gpu specifying the GPU on which to run.
 
 If you find this code useful for your research, please cite
 
