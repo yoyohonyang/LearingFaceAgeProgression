@@ -88,7 +88,7 @@ th test_aging.lua \
 /
 ```
 
-By default this script runs on GPU.
+By default this script runs on GPU. The CUDA version may affect the calculation results. We use cuda 8.0.
 
 If you find this code useful for your research, please cite
 
