@@ -16,6 +16,12 @@ In this repository we provide the pretrained aging models and the code for runni
   <img src='doc/demo/CACD_aging_results_25_test_res.png' height="850">
 </div>
 
+<div align='center'>
+  <img src='doc/demo/MORPH_aging_results_1_test_res.png' height="850">
+  <img src='doc/demo/MORPH_aging_results_2_test_res.png' height="850">
+  <img src='doc/demo/MORPH_aging_results_3_test_res.png' height="850">
+  <img src='doc/demo/MORPH_aging_results_4_test_res.png' height="850">
+</div>
 
 
 
@@ -65,11 +71,11 @@ Download the pretrained models to the folder `models/`.
 The script `make_aging_dataset.py` lets you generate an hdf5 file of face images:
 ```bash
 python scripts/make_aging_dataset.py \
-  --train_x_dir ata/CACD/input \
-  --train_image_list_x data/CACD/image_list_cacd.txt \
-  --val_x_dir data/CACD/input \
-  --val_image_list_x data/CACD/image_list_cacd.txt \
-  --output_file data/CACD/CACD_test.h5/
+  -train_x_dir ata/CACD/input \
+  -train_image_list_x data/CACD/image_list_cacd.txt \
+  -val_x_dir data/CACD/input \
+  -val_image_list_x data/CACD/image_list_cacd.txt \
+  -output_file data/CACD/CACD_test.h5/
 ```
 
 The script `test_aging.lua` lets you use a trained model to aging the face images:
