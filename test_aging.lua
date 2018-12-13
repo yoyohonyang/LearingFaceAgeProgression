@@ -78,4 +78,4 @@ local function main()
 	end
 end
 
-mian()
+main()
