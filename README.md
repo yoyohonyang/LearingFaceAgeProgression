@@ -62,15 +62,25 @@ Download the pretrained models to the folder `models/`.
 
 
 ## Running on new images
-The script `make_aging_dataset.py` lets you put the face images into the hdf5 file:
+The script `make_aging_dataset.py` lets you generate an hdf5 file of face images:
 ```bash
-python scripts/make_aging_dataset.py
+python scripts/make_aging_dataset.py \
+  --train_x_dir ata/CACD/input \
+  --train_image_list_x data/CACD/image_list_cacd.txt \
+  --val_x_dir data/CACD/input \
+  --val_image_list_x data/CACD/image_list_cacd.txt \
+  --output_file data/CACD/CACD_test.h5/
 ```
 
 The script `test_aging.lua` lets you use a trained model to aging the face images:
+
 ```bash
-th test_aging.lua
+th test_aging.lua \
+  -model models/CACD_Aging.t7 \
+  -h5_file data/CACD/CACD_test.h5 \
+  -output_dir ./CACD_aging_results/
 ```
+
 By default this script runs on GPU.
 
 If you find this code useful for your research, please cite
