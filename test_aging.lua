@@ -25,7 +25,7 @@ local opt = {
     backend =  'cuda', 'cuda|opencl', 
     output_dir = './CACD_aging_results',
     output_filename = 'CACD_aging_results',
-    num_val_batches = 20,
+    num_val_batches = 25,
 	batch_size = 8,
 }
 
