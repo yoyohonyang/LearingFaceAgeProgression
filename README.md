@@ -5,8 +5,20 @@ The two underlying requirements of face age progression, i.e. aging accuracy and
 
 <img align="right" src="https://github.com/yoyohonyang/LearingFaceAgeProgression/blob/master/doc/LearningFaceAgeProgression.png">
 
+##
+In this repository we provide the pretrained aging models and the code for running the models on new face images. 
 
-In this repository we provide the pretrained aging models and the demo code. 
+## Some example age-progressed faces:
+<div align='center'>
+  <img src='doc/demo/CACD_aging_results_15_test_res.png' height="850">
+  <img src='doc/demo/CACD_aging_results_16_test_res.png' height="850">
+  <img src='doc/demo/CACD_aging_results_24_test_res.png' height="850">
+  <img src='doc/demo/CACD_aging_results_25_test_res.png' height="850">
+</div>
+
+
+
+
 
 ## Setup
 The code is implemented in [Torch7](http://torch.ch/).
@@ -46,7 +58,7 @@ luarocks install cudnn
 ## Pretrained Models
 Download the pretrained models to the folder `models/`.
 * [CACD](https://drive.google.com/file/d/1q0O9CTCNfAjLOKXywggLz6fU3zrmfNJ9/view?usp=sharing)
-
+* [MORPH](https://drive.google.com/file/d/1hvmRg6zW6EdVLruNgrQF21WrT-AeH7_M/view?usp=sharing)
 
 
 ## Running on new images
