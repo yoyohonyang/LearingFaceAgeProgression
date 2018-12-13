@@ -71,7 +71,7 @@ Download the pretrained models to the folder `models/`.
 The script `make_aging_dataset.py` lets you generate an hdf5 file of face images:
 ```bash
 python scripts/make_aging_dataset.py \
-  -train_x_dir ata/CACD/input \
+  -train_x_dir data/CACD/input \
   -train_image_list_x data/CACD/image_list_cacd.txt \
   -val_x_dir data/CACD/input \
   -val_image_list_x data/CACD/image_list_cacd.txt \
