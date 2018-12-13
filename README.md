@@ -5,9 +5,10 @@ The two underlying requirements of face age progression, i.e. aging accuracy and
 
 <img align="right" src="https://github.com/yoyohonyang/LearingFaceAgeProgression/blob/master/doc/LearningFaceAgeProgression.png">
 
+##
 In this repository we provide the pretrained aging models and the code for running the models on new face images. 
 
-Some example age-progressed faces:
+## Some example age-progressed faces:
 <div align='center'>
   <img src='doc/demo/CACD_aging_results_20_test_res.png' height="850">
   <img src='doc/demo/CACD_aging_results_21_test_res.png' height="850">
