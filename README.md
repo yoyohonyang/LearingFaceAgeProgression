@@ -10,17 +10,17 @@ In this repository we provide the pretrained aging models and the code for runni
 
 ## Some example age-progressed faces:
 <div align='center'>
-  <img src='doc/demo/CACD_aging_results_15_test_res.png' height="850">
-  <img src='doc/demo/CACD_aging_results_16_test_res.png' height="850">
-  <img src='doc/demo/CACD_aging_results_24_test_res.png' height="850">
-  <img src='doc/demo/CACD_aging_results_25_test_res.png' height="850">
+  <img src='doc/CACD_aging_results_15_test_res.png' height="850">
+  <img src='doc/CACD_aging_results_16_test_res.png' height="850">
+  <img src='doc/CACD_aging_results_24_test_res.png' height="850">
+  <img src='doc/CACD_aging_results_25_test_res.png' height="850">
 </div>
 
 <div align='center'>
-  <img src='doc/demo/MORPH_aging_results_1_test_res.png' height="850">
-  <img src='doc/demo/MORPH_aging_results_2_test_res.png' height="850">
-  <img src='doc/demo/MORPH_aging_results_3_test_res.png' height="850">
-  <img src='doc/demo/MORPH_aging_results_4_test_res.png' height="850">
+  <img src='doc/MORPH_aging_results_1_test_res.png' height="850">
+  <img src='doc/MORPH_aging_results_2_test_res.png' height="850">
+  <img src='doc/MORPH_aging_results_3_test_res.png' height="850">
+  <img src='doc/MORPH_aging_results_4_test_res.png' height="850">
 </div>
 
 
