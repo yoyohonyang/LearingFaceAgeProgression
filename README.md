@@ -10,10 +10,10 @@ In this repository we provide the pretrained aging models and the code for runni
 
 ## Some example age-progressed faces:
 <div align='center'>
-  <img src='doc/demo/CACD_aging_results_20_test_res.png' height="850">
-  <img src='doc/demo/CACD_aging_results_21_test_res.png' height="850">
-  <img src='doc/demo/CACD_aging_results_22_test_res.png' height="850">
-  <img src='doc/demo/CACD_aging_results_23_test_res.png' height="850">
+  <img src='doc/demo/CACD_aging_results_15_test_res.png' height="850">
+  <img src='doc/demo/CACD_aging_results_16_test_res.png' height="850">
+  <img src='doc/demo/CACD_aging_results_24_test_res.png' height="850">
+  <img src='doc/demo/CACD_aging_results_25_test_res.png' height="850">
 </div>
 
 
