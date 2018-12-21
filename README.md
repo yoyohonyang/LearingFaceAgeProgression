@@ -78,7 +78,7 @@ python scripts/make_aging_dataset.py \
 ```
 
 
-The script `test_aging.lua` lets you use a trained model to aging the faces:
+The script `test_aging.lua` lets you use a trained model to age the faces:
 
 ```bash
 th test_aging.lua \
